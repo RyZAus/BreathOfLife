@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.LiminalOrange.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../:\Users\User\Documents\1. Study\21T3\CIU310\LiminalOrange\.idea\.idea.LiminalOrange\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
