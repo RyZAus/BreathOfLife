@@ -8,7 +8,7 @@ public class ItemShaderTransition : MonoBehaviour
     //Private Vars
     private Renderer thisRenderer;
     private float swapAmount;
-    private bool swapColour;
+    private bool swapColor;
     //Public Vars
     [Tooltip("This is how long to swap materials for. Default 3.")]
     public float timeToSwap = 3;
@@ -19,30 +19,37 @@ public class ItemShaderTransition : MonoBehaviour
 
     private void Awake()
     {
-        //We are not swapping colour
-        swapColour = false;
+        //We are not swapping color
+        swapColor = false;
         //Grab the renderer
         thisRenderer = GetComponent<Renderer>();
         thisRenderer.material = firstMaterial;
         //HACK This must be removed for outside function
-        ChangeColour();
+        ChangeColor();
     }
     
     //Used for outside objects
-    public void ChangeColour()
+    public void ChangeColor()
     {
-        //We are now swapping colour
-        swapColour = true;
+        //We are now swapping color
+        swapColor = true;
+    }
+
+    public void StopColor()
+    {
+        //We are not swapping color
+        swapColor = true;
     }
 
     private void Update()
     {
-        if (swapColour == true)
+        //if currently swapping color
+        if (swapColor)
         {
             //If we aren't finished swapping
             if (swapAmount != 1)
             {
-                //Swap the colour slowly
+                //Swap the color slowly
                 swapAmount = Mathf.Lerp(0, 1, (Time.time) / timeToSwap);
                 thisRenderer.material.Lerp(firstMaterial, secondMaterial, swapAmount);
             }
