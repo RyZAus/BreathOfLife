@@ -22,16 +22,17 @@ public class ItemShaderTransition : MonoBehaviour
         //We are not swapping color
         swapColor = false;
         //Grab the renderer
-        thisRenderer = GetComponent<Renderer>();
+        thisRenderer = gameObject.GetComponent<Renderer>();
         thisRenderer.material = firstMaterial;
         //HACK This must be removed for outside function
-        ChangeColor();
+        //ChangeColor();
     }
     
     //Used for outside objects
     public void ChangeColor()
     {
         //We are now swapping color
+        Debug.Log(" Changing color");
         swapColor = true;
     }
 
