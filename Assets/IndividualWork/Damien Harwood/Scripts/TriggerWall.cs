@@ -1,48 +1,78 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 namespace DamienHarwood
 {
     public class TriggerWall : MonoBehaviour
     {
-        private GameObject _gameObject;
-        private Vector3 endPos;
-        private Vector3 startPos;
-        private Vector3 objPos;
-        public float moveDuration;
-        private float elapsedTime;
-        private float percentComplete;
-
-
-        public GameObject endPosMarker;
-
+        
+        private Vector3 currentPos;
+        private bool wallMoving;
+        
+        [Range(0, 10)]
+        public int breatheInSeconds;
+        [Range(0, 10)]
+        public int pauseAfterBreathIn;
+        [Range(0, 10)]
+        public int breatheOutSeconds;
+        [Range(0, 10)]
+        public int pauseAfterBreathOut;
+        public int moveSpeed;
         // Start is called before the first frame update
         void Start()
         {
-            GetPositions();
+            StartCoroutine(BreathePattern());
         }
-
-        private void GetPositions()
+        
+        IEnumerator BreathePattern()
         {
-            // Sets the start position for the current move cycle to the current position and gets the position of the end marker
-            startPos = transform.position;
-            endPos = endPosMarker.transform.position;
+            while (true)
+            {   
+                // Start Breathing in
+                wallMoving = false;
+                Debug.Log("breathe in");
+                yield return new WaitForSeconds(breatheInSeconds);
+                // Breathe in finished
+                
+                // Start holding Breath
+                Debug.Log("hold in");
+
+                yield return new WaitForSeconds(pauseAfterBreathIn);
+                // Holding breath finished
+                
+                // Start breathing in
+                wallMoving = true;
+                Debug.Log("breathe out");
+                yield return new WaitForSeconds(breatheOutSeconds);
+                // Breathe out finished
+                
+                // Start holding breath out
+                Debug.Log("hold out");
+                yield return new WaitForSeconds(pauseAfterBreathOut);
+                // Holding breath out finished
+                
+            }
         }
 
 
         // Update is called once per frame
         void Update()
         {
-            elapsedTime += Time.deltaTime;
-            float percentComplete = elapsedTime / moveDuration;
-            transform.position = Vector3.Lerp(startPos, endPos, percentComplete);
+            if (wallMoving)
+            {
+                transform.position += transform.forward * (moveSpeed * Time.deltaTime);
+            }
         }
 
-        void TryMove()
+        private void OnTriggerEnter(Collider other)
         {
-            
+            if (other.GetComponent<ItemShaderTransition>())
+            {
+                other.GetComponent<ItemShaderTransition>().ChangeColor();
+            }
         }
     }
 }
