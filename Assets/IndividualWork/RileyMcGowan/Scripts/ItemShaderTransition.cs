@@ -21,11 +21,12 @@ public class ItemShaderTransition : MonoBehaviour
     {
         //We are not swapping color
         swapColor = false;
+        swapAmount = 0;
         //Grab the renderer
         thisRenderer = gameObject.GetComponent<Renderer>();
         thisRenderer.material = firstMaterial;
         //HACK This must be removed for outside function
-        //ChangeColor();
+        StartCoroutine(DelayStartColour());
     }
     
     //Used for outside objects
@@ -39,7 +40,7 @@ public class ItemShaderTransition : MonoBehaviour
     public void StopColor()
     {
         //We are not swapping color
-        swapColor = true;
+        swapColor = false;
     }
 
     private void Update()
@@ -48,12 +49,20 @@ public class ItemShaderTransition : MonoBehaviour
         if (swapColor)
         {
             //If we aren't finished swapping
-            if (swapAmount != 1)
+            if (swapAmount <= 1)
             {
                 //Swap the color slowly
-                swapAmount = Mathf.Lerp(0, 1, (Time.time) / timeToSwap);
+                swapAmount += .01f / timeToSwap; //HACK Need to fix
+                Debug.Log(swapAmount);
+                //swapAmount = Mathf.PingPong(Time.time, timeToSwap) / timeToSwap;
                 thisRenderer.material.Lerp(firstMaterial, secondMaterial, swapAmount);
             }
         }
+    }
+
+    public IEnumerator DelayStartColour()
+    {
+        yield return new WaitForSeconds(5);
+        ChangeColor();
     }
 }
