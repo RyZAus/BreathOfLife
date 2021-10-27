@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 
 namespace DamienHarwood
@@ -33,24 +32,20 @@ namespace DamienHarwood
             {   
                 // Start Breathing in
                 wallMoving = false;
-                Debug.Log("breathe in");
                 yield return new WaitForSeconds(breatheInSeconds);
                 // Breathe in finished
                 
                 // Start holding Breath
-                Debug.Log("hold in");
 
                 yield return new WaitForSeconds(pauseAfterBreathIn);
                 // Holding breath finished
                 
                 // Start breathing in
                 wallMoving = true;
-                Debug.Log("breathe out");
                 yield return new WaitForSeconds(breatheOutSeconds);
                 // Breathe out finished
                 
                 // Start holding breath out
-                Debug.Log("hold out");
                 yield return new WaitForSeconds(pauseAfterBreathOut);
                 // Holding breath out finished
                 
