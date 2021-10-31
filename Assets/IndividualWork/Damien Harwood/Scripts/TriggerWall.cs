@@ -1,6 +1,4 @@
-﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace DamienHarwood
@@ -11,6 +9,7 @@ namespace DamienHarwood
         private Vector3 currentPos;
         private bool wallMoving;
         
+        public int startDelay;
         [Range(0, 10)]
         public int breatheInSeconds;
         [Range(0, 10)]
@@ -20,6 +19,8 @@ namespace DamienHarwood
         [Range(0, 10)]
         public int pauseAfterBreathOut;
         public int moveSpeed;
+
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -28,6 +29,7 @@ namespace DamienHarwood
         
         IEnumerator BreathePattern()
         {
+            yield return new WaitForSeconds(startDelay);
             while (true)
             {   
                 // Start Breathing in
@@ -54,11 +56,12 @@ namespace DamienHarwood
 
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
             if (wallMoving)
             {
-                transform.position += transform.forward * (moveSpeed * Time.deltaTime);
+                var transform1 = transform;
+                transform1.position += transform1.forward * (moveSpeed * Time.deltaTime);
             }
         }
 

@@ -33,6 +33,10 @@ public class ItemShaderTransition : MonoBehaviour
     {
         //We are now swapping color
         Debug.Log(" Changing color");
+        if (swapColor)
+        {
+            return;
+        }
         swapColor = true;
         swapAmount2 = .01f / timeToSwap; //HACK A1 - Need to fix
     }
