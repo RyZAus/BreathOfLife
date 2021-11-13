@@ -3,12 +3,32 @@ guid: 29abd1f25626f044e885028102d684eb
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CB2
+    second: {fileID: 2100000, guid: 7f86e91d3c857e14783ed0ec6c26f729, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CB3
+    second: {fileID: 2100000, guid: 578ed78ffbb88fd4baa6f3fde1f6a948, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CB4
+    second: {fileID: 2100000, guid: d156424b1eb24744ebea52ccdbb38c1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface1
+    second: {fileID: 2100000, guid: 8247da05ed38b32478774f5f91f5d358, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
