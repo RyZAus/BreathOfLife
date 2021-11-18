@@ -18,6 +18,10 @@ public class ItemShaderTransition : MonoBehaviour
     [Tooltip("End material.")]
     public Material secondMaterial;
 
+    public float alpha;
+
+    private Shader shader;
+
     private void Awake()
     {
         //We are not swapping color
@@ -26,6 +30,8 @@ public class ItemShaderTransition : MonoBehaviour
         //Grab the renderer
         thisRenderer = gameObject.GetComponent<Renderer>();
         thisRenderer.material = firstMaterial;
+        
+        
     }
     
     //Used for outside objects
@@ -49,15 +55,16 @@ public class ItemShaderTransition : MonoBehaviour
 
     private void Update()
     {
+        
         //if currently swapping color
-        if (swapColor)
+       // if (swapColor)
         {
             //If we aren't finished swapping
-            if (swapAmount <= 1)
+           // if (swapAmount <= 1)
             {
                 //Swap the color slowly
-                swapAmount += swapAmount2; //HACK A1
-                thisRenderer.material.Lerp(firstMaterial, secondMaterial, swapAmount);
+                //swapAmount += swapAmount2; //HACK A1
+                //thisRenderer.material.Lerp(firstMaterial, secondMaterial, swapAmount);
             }
         }
     }
