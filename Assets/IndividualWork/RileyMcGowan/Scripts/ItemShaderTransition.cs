@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemShaderTransition : MonoBehaviour
 {
     //Private Vars
-    private Renderer thisRenderer;
+    public Material[] materials;
     private float swapAmount;
     private float swapAmount2;
     private bool swapColor;
@@ -19,8 +19,10 @@ public class ItemShaderTransition : MonoBehaviour
         //We are not swapping color
         swapColor = false;
         swapAmount = 0;
-        //Grab the renderer
-        thisRenderer = gameObject.GetComponent<Renderer>();
+        foreach (Material currentMat in materials)
+        {
+            currentMat.SetFloat("_Blend", 0);
+        }
     }
     
     //Used for outside objects
@@ -44,7 +46,6 @@ public class ItemShaderTransition : MonoBehaviour
 
     private void Update()
     {
-        
         //if currently swapping color
         if (swapColor)
         {
@@ -53,7 +54,10 @@ public class ItemShaderTransition : MonoBehaviour
             {
                 //Swap the color slowly
                 swapAmount += swapAmount2;
-                thisRenderer.material.SetFloat("_Blend", swapAmount);
+                foreach (Material currentMat in materials)
+                {
+                    currentMat.SetFloat("_Blend", swapAmount);
+                }
             }
         }
     }
