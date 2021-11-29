@@ -105,9 +105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materials:
-  - {fileID: 2100000, guid: 2af46ced41de0784b9efc635669368f6, type: 2}
+  materials: []
   timeToSwap: 3
+  renderers:
+  - {fileID: 3403010142725383522}
 --- !u!1 &3042998816738559425
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,9 +232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materials:
-  - {fileID: 2100000, guid: 04031d88e029ce845a3f0989bfd32c3f, type: 2}
+  materials: []
   timeToSwap: 3
+  renderers:
+  - {fileID: 6468816183300035412}
 --- !u!64 &984908671072236883
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -6,22 +6,27 @@ using UnityEngine;
 public class ItemShaderTransition : MonoBehaviour
 {
     //Private Vars
-    public Material[] materials;
+    public List<Material> materials;
     private float swapAmount;
     private float swapAmount2;
     private bool swapColor;
     //Public Vars
     [Tooltip("This is how long to swap materials for. Default 3.")]
     public float timeToSwap = 3;
+    public Renderer[] renderers;
 
     private void Awake()
     {
         //We are not swapping color
         swapColor = false;
         swapAmount = 0;
-        foreach (Material currentMat in materials)
+        foreach (Renderer thisRenderer in renderers)
         {
-            currentMat.SetFloat("_Blend", 0);
+            foreach (Material thisMat in thisRenderer.materials)
+            {
+                materials.Add(thisMat);
+                thisMat.SetFloat("_Blend", 0);
+            }
         }
     }
     
@@ -50,7 +55,7 @@ public class ItemShaderTransition : MonoBehaviour
         if (swapColor)
         {
             //If we aren't finished swapping
-            if (swapAmount <= 1)
+            if (swapAmount < 1)
             {
                 //Swap the color slowly
                 swapAmount += swapAmount2;
@@ -59,12 +64,11 @@ public class ItemShaderTransition : MonoBehaviour
                     currentMat.SetFloat("_Blend", swapAmount);
                 }
             }
+            else
+            {
+                StopColor();
+                this.enabled = false;
+            }
         }
-    }
-
-    public IEnumerator DelayStartColour()
-    {
-        yield return new WaitForSeconds(5);
-        ChangeColor();
     }
 }

@@ -92,10 +92,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materials:
-  - {fileID: 2100000, guid: 308703a79c81f024f90c4733ab88ea06, type: 2}
-  - {fileID: 2100000, guid: 4b5567b470b859c4e8f805bb5fbb071f, type: 2}
+  materials: []
   timeToSwap: 3
+  renderers:
+  - {fileID: 8331807948154821732}
 --- !u!64 &7518917314220436855
 MeshCollider:
   m_ObjectHideFlags: 0

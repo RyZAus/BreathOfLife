@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 3913818620130852590}
   - component: {fileID: 3212554372607821602}
   - component: {fileID: 6981585879395485089}
-  - component: {fileID: 2046372506}
-  - component: {fileID: 2046372503}
   m_Layer: 0
   m_Name: Chrysanthemum_pPlane21
   m_TagString: Untagged
@@ -81,33 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2046372506
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2350236988894014942}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 9014956939774056225, guid: f98e6364857d53443b0dba3ce304e51a, type: 3}
---- !u!114 &2046372503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2350236988894014942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToSwap: 3
 --- !u!1 &2835399003158831046
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +88,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1225548121754414549}
+  - component: {fileID: 7508333122752348787}
+  - component: {fileID: 7657917300790206082}
   m_Layer: 0
   m_Name: WhiteFlower
   m_TagString: Untagged
@@ -142,6 +115,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7508333122752348787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2835399003158831046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials: []
+  timeToSwap: 3
+  renderers:
+  - {fileID: 6981585879395485089}
+  - {fileID: 3417695826807658636}
+  - {fileID: 6778284538919019374}
+  - {fileID: 2700493325457109367}
+--- !u!65 &7657917300790206082
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2835399003158831046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.3}
+  m_Center: {x: -0.12, y: -0.02, z: -0.12}
 --- !u!1 &5927767736805215902
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,8 +158,6 @@ GameObject:
   - component: {fileID: 1813294331140177592}
   - component: {fileID: 4038225858224079760}
   - component: {fileID: 6778284538919019374}
-  - component: {fileID: 1818455403948059642}
-  - component: {fileID: 5879404598985861617}
   m_Layer: 0
   m_Name: Chrysanthemum_pPlane23
   m_TagString: Untagged
@@ -223,33 +226,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1818455403948059642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5927767736805215902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToSwap: 3
---- !u!64 &5879404598985861617
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5927767736805215902}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4592025592718211357, guid: f98e6364857d53443b0dba3ce304e51a, type: 3}
 --- !u!1 &8154723454160838447
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,8 +237,6 @@ GameObject:
   - component: {fileID: 7001637917386878860}
   - component: {fileID: 6343556118779946216}
   - component: {fileID: 3417695826807658636}
-  - component: {fileID: 7330357643660912675}
-  - component: {fileID: 6508934598896758520}
   m_Layer: 0
   m_Name: Chrysanthemum_pPlane22
   m_TagString: Untagged
@@ -331,33 +305,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &7330357643660912675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8154723454160838447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToSwap: 3
---- !u!64 &6508934598896758520
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8154723454160838447}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -8312977558876580917, guid: f98e6364857d53443b0dba3ce304e51a, type: 3}
 --- !u!1 &8981013964556233457
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,8 +316,6 @@ GameObject:
   - component: {fileID: 9186103448416786572}
   - component: {fileID: 3091536453076356743}
   - component: {fileID: 2700493325457109367}
-  - component: {fileID: 8035275883737978790}
-  - component: {fileID: 2104689290821468084}
   m_Layer: 0
   m_Name: pPlane24
   m_TagString: Untagged
@@ -439,30 +384,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8035275883737978790
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8981013964556233457}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -2196509164617637005, guid: f98e6364857d53443b0dba3ce304e51a, type: 3}
---- !u!114 &2104689290821468084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8981013964556233457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToSwap: 3
