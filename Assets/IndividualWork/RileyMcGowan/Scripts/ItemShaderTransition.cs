@@ -6,32 +6,28 @@ using UnityEngine;
 public class ItemShaderTransition : MonoBehaviour
 {
     //Private Vars
-    private Renderer thisRenderer;
+    public List<Material> materials;
     private float swapAmount;
     private float swapAmount2;
     private bool swapColor;
     //Public Vars
     [Tooltip("This is how long to swap materials for. Default 3.")]
     public float timeToSwap = 3;
-    [Tooltip("Starting material.")]
-    public Material firstMaterial;
-    [Tooltip("End material.")]
-    public Material secondMaterial;
-
-    public float alpha;
-
-    private Shader shader;
+    public Renderer[] renderers;
 
     private void Awake()
     {
         //We are not swapping color
         swapColor = false;
         swapAmount = 0;
-        //Grab the renderer
-        thisRenderer = gameObject.GetComponent<Renderer>();
-        thisRenderer.material = firstMaterial;
-        
-        
+        foreach (Renderer thisRenderer in renderers)
+        {
+            foreach (Material thisMat in thisRenderer.materials)
+            {
+                materials.Add(thisMat);
+                thisMat.SetFloat("_Blend", 0);
+            }
+        }
     }
     
     //Used for outside objects
@@ -55,23 +51,24 @@ public class ItemShaderTransition : MonoBehaviour
 
     private void Update()
     {
-        
         //if currently swapping color
-       // if (swapColor)
+        if (swapColor)
         {
             //If we aren't finished swapping
-           // if (swapAmount <= 1)
+            if (swapAmount < 1)
             {
                 //Swap the color slowly
-                //swapAmount += swapAmount2; //HACK A1
-                //thisRenderer.material.Lerp(firstMaterial, secondMaterial, swapAmount);
+                swapAmount += swapAmount2;
+                foreach (Material currentMat in materials)
+                {
+                    currentMat.SetFloat("_Blend", swapAmount);
+                }
+            }
+            else
+            {
+                StopColor();
+                this.enabled = false;
             }
         }
-    }
-
-    public IEnumerator DelayStartColour()
-    {
-        yield return new WaitForSeconds(5);
-        ChangeColor();
     }
 }
