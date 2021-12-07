@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2922763748036521885}
   - component: {fileID: 6184771166877783467}
   - component: {fileID: 497702669681420626}
+  - component: {fileID: 522108180226529198}
+  - component: {fileID: 459844182024126393}
   m_Layer: 0
   m_Name: Lantrn
   m_TagString: Untagged
@@ -78,3 +80,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &522108180226529198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2221655587254295950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials: []
+  timeToSwap: 3
+  renderers:
+  - {fileID: 497702669681420626}
+--- !u!64 &459844182024126393
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2221655587254295950}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4068373912626513877, guid: 12caa1f20b669344e924b72ba9e4a24c, type: 3}

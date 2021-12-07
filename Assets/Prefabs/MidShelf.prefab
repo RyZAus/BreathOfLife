@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2065113945339226337}
   - component: {fileID: 121861292674582221}
   - component: {fileID: 9126642091408780189}
+  - component: {fileID: -4829639007595423105}
+  - component: {fileID: -2292218992257397651}
   m_Layer: 0
   m_Name: MidShelf
   m_TagString: Untagged
@@ -77,3 +79,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-4829639007595423105
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8793057031744996963}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -1364087873485794358, guid: 2541b6656bb9d9240ad5026a791ca127, type: 3}
+--- !u!114 &-2292218992257397651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8793057031744996963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials: []
+  timeToSwap: 3
+  renderers:
+  - {fileID: 9126642091408780189}

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1695768451454231443}
   - component: {fileID: 2771087477229901997}
   - component: {fileID: 5905499195707267202}
+  - component: {fileID: -4281267254346051128}
+  - component: {fileID: -2404962585703557819}
   m_Layer: 0
   m_Name: Fern
   m_TagString: Untagged
@@ -77,3 +79,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-4281267254346051128
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8012642240425103185}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2532197596911439093, guid: 7fe202356d4b9084b8a2daa7b79044a9, type: 3}
+--- !u!114 &-2404962585703557819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8012642240425103185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials: []
+  timeToSwap: 3
+  renderers:
+  - {fileID: 5905499195707267202}

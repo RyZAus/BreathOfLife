@@ -91,7 +91,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials: []
   timeToSwap: 3
+  renderers:
+  - {fileID: 4648014353241797603}
 --- !u!64 &3492140896715278112
 MeshCollider:
   m_ObjectHideFlags: 0
