@@ -34,7 +34,6 @@ public class ItemShaderTransition : MonoBehaviour
     public void ChangeColor()
     {
         //We are now swapping color
-        Debug.Log(" Changing color");
         if (swapColor)
         {
             return;
