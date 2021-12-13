@@ -105,7 +105,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4ff71a64404fa4bbb231e8512ac132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materials: []
-  timeToSwap: 3
-  renderers:
-  - {fileID: 8666521565481283899}
+  timeToSwap: 1
