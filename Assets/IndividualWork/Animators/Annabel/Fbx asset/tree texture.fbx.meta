@@ -3,7 +3,17 @@ guid: cec3719658cef8145936cc9e17aff428
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rock_tree_lambert1
+    second: {fileID: 2100000, guid: 04031d88e029ce845a3f0989bfd32c3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rock_tree_lambert2
+    second: {fileID: 2100000, guid: 2af46ced41de0784b9efc635669368f6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -43,7 +53,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

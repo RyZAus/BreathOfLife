@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5461b5162e5dc8641ac7fea9230d0d82
+guid: 223b2c4d2b4457a4592284dc94b55515
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
@@ -7,38 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: book_lowpoly_Object001_mtl
-    second: {fileID: 2100000, guid: 27687f476f9c66c42bc882ad9a5c742f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: book_lowpoly_Object002_mtl
-    second: {fileID: 2100000, guid: b404f03d583e1f047bf80cc76e730f27, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: book_lowpoly_Object003_mtl
-    second: {fileID: 2100000, guid: 1a5229bc4ec8862469dc73bcef529d49, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: book_lowpoly_Object004_mtl
-    second: {fileID: 2100000, guid: f6909ecff6a6a684eaa419fa4183b79c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: book_lowpoly_Object005_mtl
-    second: {fileID: 2100000, guid: 048088d7a0f2589448d510c57272be3b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: book_lowpoly_Object006_mtl
-    second: {fileID: 2100000, guid: c448690eb0a19684595aca8ed4f7b396, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: book_lowpoly_Object007_mtl
-    second: {fileID: 2100000, guid: f3403fff162e2a34d84184c8c41ff5f3, type: 2}
+      name: lambert2
+    second: {fileID: 2100000, guid: 94aec95d46dac504292488913573b7a9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
