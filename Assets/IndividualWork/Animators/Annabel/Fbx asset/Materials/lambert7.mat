@@ -19,8 +19,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AOTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BlankMetallic:
-        m_Texture: {fileID: 2800000, guid: 81cd6e4d8d78eb9459bc7d80ee8530b7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4ad92bc6e90af3742a21c705c6f5a687, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BlankNormal:
@@ -52,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex2:
-        m_Texture: {fileID: 2800000, guid: 34cb7bbfeccbcbd4198c602f9768c2e8, type: 3}
+        m_Texture: {fileID: 2800000, guid: d303dedc4a433c64db9a9be80f5ebff1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -88,7 +92,7 @@ Material:
     - _FadeDistance: 0
     - _FadeScaleX: 4
     - _GlossMapScale: 0.5
-    - _Glossiness: 0
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
