@@ -67,11 +67,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1dd1f83684af0478773ee0066d6346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breatheInSeconds: 4
-  pauseAfterBreathIn: 4
-  breatheOutSeconds: 4
-  pauseAfterBreathOut: 4
-  moveSpeed: 1
+  startDelay: 0
+  breatheInSeconds: 5
+  pauseAfterBreathIn: 3
+  breatheOutSeconds: 5
+  pauseAfterBreathOut: 5
+  moveSpeed: 0.75
 --- !u!54 &1124208664
 Rigidbody:
   m_ObjectHideFlags: 0

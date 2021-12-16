@@ -18,7 +18,7 @@ namespace DamienHarwood
         public int breatheOutSeconds;
         [Range(0, 10)]
         public int pauseAfterBreathOut;
-        public int moveSpeed;
+        public float moveSpeed;
 
         
         // Start is called before the first frame update
