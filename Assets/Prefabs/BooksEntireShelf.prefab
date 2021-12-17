@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7882120943513155804}
   - component: {fileID: 3978992076969136553}
   - component: {fileID: 5766090857190243384}
-  - component: {fileID: -6273459035950802513}
   - component: {fileID: -1719849537065177860}
+  - component: {fileID: -6273459035950802513}
   m_Layer: 0
   m_Name: BooksEntireShelf
   m_TagString: Untagged
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4448996640255752274}
-  m_Mesh: {fileID: 7234494410474993933, guid: 223b2c4d2b4457a4592284dc94b55515, type: 3}
+  m_Mesh: {fileID: 5557714343365855330, guid: 9ab6298f80247264cbf9b83a2738718f, type: 3}
 --- !u!23 &5766090857190243384
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 0.5
+  m_ScaleInLightmap: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -79,20 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &-6273459035950802513
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4448996640255752274}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 7234494410474993933, guid: 223b2c4d2b4457a4592284dc94b55515, type: 3}
 --- !u!114 &-1719849537065177860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,3 +92,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToSwap: 3
+--- !u!64 &-6273459035950802513
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448996640255752274}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 5557714343365855330, guid: 9ab6298f80247264cbf9b83a2738718f, type: 3}
